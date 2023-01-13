@@ -1,0 +1,37 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "name": "EDHREC MTG:Arena Export",
+  "version": "1.0",
+  "description": "Copy to clipboard cards that can be used in MTGA from the current deck.",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": [
+        "*://edhrec.com/*"
+      ],
+      "css": [
+        "style.css"
+      ],
+      "js": [
+        "script.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "/scryfall_arena_data.json"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "img/img-16.png",
+    "32": "img/img-32.png",
+    "48": "img/img-48.png",
+    "128": "img/img-128.png"
+  }
+}
