@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 
-const rawdata = fs.readFileSync('oracle-cards-20230113220255.json');
+const rawdata = fs.readFileSync('oracle-cards-20230222220324.json');
 const defaultData = JSON.parse(rawdata);
 
 const SORT_STRING = (s1, s2) => s1.localeCompare(s2);
